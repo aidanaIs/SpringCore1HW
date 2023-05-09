@@ -9,6 +9,7 @@ public class App {
     public static void main(String[] args) {
 
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
+<<<<<<< HEAD
 //        Java java= applicationContext.getBean("java", Java.class);
 //        JS js=applicationContext.getBean("js", JS.class);
 //        Course course= applicationContext.getBean("course", Course.class);
@@ -22,5 +23,11 @@ public class App {
 
         applicationContext.close();
 
+=======
+        Dancer dancer = applicationContext.getBean("dancer", Dancer.class);
+        System.out.println(dancer);
+
+        applicationContext.close();
+>>>>>>> bf58fbf (Initial commit)
     }
 }

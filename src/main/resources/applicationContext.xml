@@ -9,6 +9,7 @@ http://www.springframework.org/schema/context
 http://www.springframework.org/schema/context/spring-context.xsd
 http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
 
+<<<<<<< HEAD
  <bean id="java"
        class="course.Java">
  </bean>
@@ -26,6 +27,43 @@ http://www.springframework.org/schema/util https://www.springframework.org/schem
   <property name="duration" value="9"></property>
   <property name="price" value="12000"></property>
  </bean>
+=======
+    <context:property-placeholder location="classpath:application.properties"/>
+
+
+    <bean id="breakDancer"
+          class="course.BreakDancer">
+    </bean>
+    <bean id="balletDancer"
+          class="course.BalletDancer">
+    </bean>
+
+<!--    <bean id="dancer"-->
+<!--          class="course.Dancer">-->
+<!--        <property name="list">-->
+<!--            <list>-->
+<!--                <ref bean="breakDancer"></ref>-->
+<!--                <ref bean="balletDancer"></ref>-->
+<!--            </list>-->
+<!--        </property>-->
+
+<!--        <property name="age" value="${dancer.age}"/>-->
+<!--        <property name="yearsDancing" value="${dancer.yearsDancing}"/>-->
+<!--    </bean>-->
+
+    <bean id="dancer"
+          class="course.Dancer">
+        <constructor-arg name="list">
+            <list>
+                <ref bean="breakDancer"></ref>
+                <ref bean="balletDancer"></ref>
+            </list>
+        </constructor-arg>
+
+        <constructor-arg name="age" value="${dancer.age}"/>
+        <constructor-arg name="yearsDancing" value="${dancer.yearsDancing}"/>
+    </bean>
+>>>>>>> bf58fbf (Initial commit)
 
 </beans>
 
