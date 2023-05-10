@@ -9,27 +9,7 @@ http://www.springframework.org/schema/context
 http://www.springframework.org/schema/context/spring-context.xsd
 http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
 
-<<<<<<< HEAD
- <bean id="java"
-       class="course.Java">
- </bean>
- <bean id="js"
-       class="course.JS">
- </bean>
-<!-- <bean id="course"-->
-<!--       class="course.Course">-->
-<!--  <constructor-arg ref="java"></constructor-arg>-->
-<!-- </bean>-->
-
- <bean id="course"
-       class="course.Course">
-  <property name="prgLangs" ref="java"></property>
-  <property name="duration" value="9"></property>
-  <property name="price" value="12000"></property>
- </bean>
-=======
     <context:property-placeholder location="classpath:application.properties"/>
-
 
     <bean id="breakDancer"
           class="course.BreakDancer">
@@ -63,7 +43,5 @@ http://www.springframework.org/schema/util https://www.springframework.org/schem
         <constructor-arg name="age" value="${dancer.age}"/>
         <constructor-arg name="yearsDancing" value="${dancer.yearsDancing}"/>
     </bean>
->>>>>>> bf58fbf (Initial commit)
-
 </beans>
 
